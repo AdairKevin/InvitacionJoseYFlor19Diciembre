@@ -4,7 +4,7 @@ const second = 1000,
   hour = minute * 60,
   day = hour * 24;
 
-let countDown = new Date("Sep 21, 2025 18:00:10").getTime(),
+let countDown = new Date("Dec 19, 2026 17:50:00").getTime(),
   x = setInterval(function () {
     let now = new Date().getTime(),
       distance = countDown - now;

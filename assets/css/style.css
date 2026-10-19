@@ -1005,3 +1005,20 @@ footer a {
 .calendar-btn:active {
   transform: scale(0.97);
 }
+
+.timeline-emoji {
+  display: block;
+  font-size: 2.4rem;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+/* Padrinos */
+.padrinos-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  color: var(--bg-dorado-1);
+  font-family: var(--font-PT-serif);
+  font-size: 1.1rem;
+}
