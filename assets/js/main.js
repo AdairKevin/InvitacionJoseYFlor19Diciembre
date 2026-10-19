@@ -75,3 +75,32 @@ button.addEventListener(
   },
   false
 );
+
+/* galería */
+const sliderTrack = document.getElementById("sliderTrack");
+if (sliderTrack) {
+  const total = sliderTrack.children.length;
+  let actual = 0;
+  setInterval(() => {
+    actual = (actual + 1) % total;
+    sliderTrack.style.transform = `translateX(-${actual * 100}%)`;
+  }, 3500);
+}
+
+/* confirmación por WhatsApp */
+document.querySelectorAll(".rsvp-form").forEach((form) => {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const datos = new FormData(form);
+    let texto =
+      `¡Hola! Confirmo mi asistencia a ${form.dataset.evento}.\n` +
+      `Nombre: ${datos.get("nombre").trim()}\n` +
+      `Número de asistentes: ${datos.get("personas")}`;
+    const mensaje = (datos.get("mensaje") || "").trim();
+    if (mensaje) texto += `\nMensaje: ${mensaje}`;
+    window.open(
+      `https://wa.me/${form.dataset.whatsapp}?text=${encodeURIComponent(texto)}`,
+      "_blank"
+    );
+  });
+});

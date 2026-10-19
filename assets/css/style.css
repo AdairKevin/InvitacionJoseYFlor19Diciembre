@@ -1022,3 +1022,100 @@ footer a {
   font-family: var(--font-PT-serif);
   font-size: 1.1rem;
 }
+
+/* -----------------------
+   CALENDARIO: alinear números con los días
+--------------------------*/
+.calendar-days {
+  padding: 15px 15px 8px;
+  column-gap: 10px;
+}
+
+/* -----------------------
+   GALERÍA (slider con fotos <img>)
+--------------------------*/
+.slider-photo {
+  overflow: hidden;
+}
+
+.slider-photo figure.slider-track {
+  display: flex;
+  width: 100%;
+  left: 0;
+  animation: none;
+  transition: transform 0.9s ease;
+}
+
+.slider-photo figure.slider-track .img {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: center;
+  float: none;
+}
+
+/* -----------------------
+   CONFIRMACIÓN POR WHATSAPP
+--------------------------*/
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 380px;
+  margin: 1.5rem auto 0;
+  padding: 1.5rem 1.2rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--bg-dorado-2);
+  border-radius: 14px;
+}
+
+.rsvp-form h3 {
+  margin: 0 0 4px;
+  font-family: var(--font-great-vibes);
+  font-weight: 400;
+  font-size: 2rem;
+  color: var(--bg-dorado-1);
+  text-align: center;
+}
+
+.rsvp-form input,
+.rsvp-form textarea {
+  font-family: var(--font-PT-serif);
+  font-size: 1rem;
+  padding: 12px 14px;
+  border: 1px solid var(--bg-dorado-2);
+  border-radius: 10px;
+  background: var(--white);
+  color: var(--txt-body);
+  resize: vertical;
+}
+
+.rsvp-btn {
+  margin-top: 4px;
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  background: var(--bg-gradient);
+  color: var(--txt-body);
+  font-family: var(--font-PT-serif);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Los círculos de los días no deben ser más anchos que su columna */
+.calendar-dates span {
+  width: 100%;
+  max-width: 36px;
+  height: auto;
+  aspect-ratio: 1;
+}
+
+/* Emojis del cronograma en un solo tono dorado, como los demás íconos */
+.timeline-emoji {
+  filter: grayscale(1) sepia(1) saturate(2.6) hue-rotate(-12deg) brightness(0.95);
+}
