@@ -1119,3 +1119,33 @@ footer a {
 .timeline-emoji {
   filter: grayscale(1) sepia(1) saturate(2.6) hue-rotate(-12deg) brightness(0.95);
 }
+
+/* Formulario de confirmación: que no se salga de la pantalla en móvil */
+.rsvp-form,
+.rsvp-form * {
+  box-sizing: border-box;
+}
+
+.rsvp-form input,
+.rsvp-form textarea,
+.rsvp-btn {
+  width: 100%;
+}
+
+/* Galería: mostrar cada foto completa, sin recortes */
+.slider-photo {
+  background: var(--bg-section-light);
+}
+
+.slider-photo figure.slider-track {
+  align-items: center;
+}
+
+.slider-photo figure.slider-track .img {
+  height: min(75vh, 560px);
+  object-fit: contain;
+}
+
+.slider-photo {
+  height: auto;
+}
