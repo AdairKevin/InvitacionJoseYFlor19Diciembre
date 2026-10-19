@@ -80,10 +80,18 @@ button.addEventListener(
 const sliderTrack = document.getElementById("sliderTrack");
 if (sliderTrack) {
   const total = sliderTrack.children.length;
+  const contenedor = sliderTrack.parentElement;
   let actual = 0;
+  const ajustarAltura = () => {
+    const alto = sliderTrack.children[actual].offsetHeight;
+    if (alto) contenedor.style.height = alto + "px";
+  };
+  window.addEventListener("load", ajustarAltura);
+  window.addEventListener("resize", ajustarAltura);
   setInterval(() => {
     actual = (actual + 1) % total;
     sliderTrack.style.transform = `translateX(-${actual * 100}%)`;
+    ajustarAltura();
   }, 3500);
 }
 

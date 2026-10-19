@@ -1149,3 +1149,19 @@ footer a {
 .slider-photo {
   height: auto;
 }
+
+/* Galería: cada foto ocupa todo el ancho con su altura natural (sin recortes ni franjas);
+   el contenedor se ajusta a la altura de la foto visible */
+.slider-photo {
+  background: none;
+  transition: height 0.6s ease;
+}
+
+.slider-photo figure.slider-track {
+  align-items: flex-start;
+}
+
+.slider-photo figure.slider-track .img {
+  height: auto;
+  object-fit: initial;
+}
